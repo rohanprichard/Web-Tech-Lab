@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+</head>
+<body>
+    <h1 style="text-align: center;color:darkgoldenrod">Karunya Innovation and Design Studio</h1>
+    
+    <hr>
+
+    <div align="center">
+        <a href="home.html">Media Elements</a> &nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="application.html">Application Form</a>
+    </div>
+
+    <hr>
+    <form action="submit.php" method="post">
+    <fieldset width="90%">
+        <legend align="center" style="color:darkgoldenrod" >Application Form</legend>
+        <table align="center">
+            <tr>
+                <td>Name: &nbsp; &nbsp &nbsp</td>
+                <td>
+                    <br>
+                    <input type="text" placeholder="Enter your name" autofocus required> <br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Application Number: &nbsp; &nbsp &nbsp</td>
+                <td>
+                    <br>
+                    <input type="text" placeholder="KU20201CS1010" pattern ="[a-zA-Z0-9]+.{13}" required> <br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Password: &nbsp; &nbsp &nbsp</td>
+                <td>
+                    <br>
+                    <input type="text" placeholder="*********" pattern =".{8,}" required> <br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Date of Birth: &nbsp; &nbsp &nbsp</td>
+                <td>
+                    <br>
+                    <input type="date" name="dob"  id=""><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Age: &nbsp; &nbsp &nbsp</td>
+                <td>
+                    <br>
+                    <input type="number" placeholder="" pattern =".{8,}" required> <br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Mobile Number: &nbsp; &nbsp &nbsp</td>
+                <td>
+                    <br>
+                    <input type="number" placeholder="Enter Mobile Number" pattern =".{10}" required> <br><br>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>E-mail: &nbsp; &nbsp &nbsp</td>
+                <td>
+                    <br>
+                    <input type="email" placeholder="Enter e-mail ID" required> <br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Gender: &nbsp; &nbsp &nbsp</td>
+                <td>
+                    <input type="radio" id="Male" name="Gender" value="Male">
+                    <label for="Male">Male</label>
+                    <input type="radio" id="Female" name="Gender" value="Female">
+                    <label for="Female">Female</label><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Address: </td>
+                <td><br><br>
+                    <textarea name="address" id="address" cols="30" rows="10">Enter Address here</textarea>
+                <br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Languages known: &nbsp; &nbsp &nbsp</td>
+                <td>
+                    <br>
+                    <input type="checkbox" id="English" name="English" value="English">
+                    <label for="vehicle1">English</label>
+                    <input type="checkbox" id="Hindi" name="Hindi" value="Hindi">
+                    <label for="vehicle1">Hindi</label>
+                    <input type="checkbox" id="Telugu" name="Telugu" value="Telugu">
+                    <label for="vehicle1">Telugu</label>
+                    <input type="checkbox" id="Tamil" name="Tamil" value="Tamil">
+                    <label for="vehicle1">Tamil</label>
+                    <input type="checkbox" id="Malayalam" name="Malayalam" value="Malayalam">
+                    <label for="vehicle1">Malayalam</label>
+                    <br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Select your course: &nbsp; &nbsp &nbsp</td>
+                <td>
+                    <input type="text" list="data" placeholder="Course" required>
+                    <datalist id="data">
+                        <option value="B.Tech CSE"></option>
+                        <option value="B.Tech AI"></option>
+                        <option value="B.Tech AI DS"></option>
+                        <option value="B.Tech AI ML"></option>
+                    </datalist>
+                    <br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Upload your Photo: </td>
+                <td>
+                    <br>
+                    <input type="file" name="Photo" id="Photo"><br><br>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+
+                </td>
+                <td>
+
+                      <input type="submit" value="Submit" align="center">
+                </td>
+            </tr>
+        </table>
+        
+    </fieldset>
+    </form>
+
+    </body>
+</html>

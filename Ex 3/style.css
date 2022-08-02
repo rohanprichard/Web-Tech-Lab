@@ -1,0 +1,197 @@
+*{
+    margin: 0px;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif ;
+    background-color: #0B3D59;
+    margin: 0px;
+}
+
+#header-box{
+    background-color:#1B75BB;
+    margin: 0px;
+}
+
+#header{
+    font-size: 40px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    color: #fdfdfd;
+    text-align: center;
+    margin: 0px;
+    
+}
+
+#banner-box{
+    background-image: url(banner.jpg);
+    background-size: 100% 600px;
+    width: 100%;
+    height: 600px;
+    margin: 0px;
+}
+
+.welcome{
+    padding-top: 200px;
+    color: #fdfdfd;
+    box-sizing: border-box;
+    padding-bottom: 400px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 40px;
+}
+
+.about-para{
+    font-size: 14px;
+    color: #fdfdfd;
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: justify;
+    line-height: 20px;
+    padding-bottom: 30px;
+
+}
+
+.about-us{
+    padding: 30px;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    color: #fdfdfd;
+}
+
+#box1{
+    height: 500px;
+    width: 33%;
+    float: left;
+    align-self: center;
+    background-image: url('student.jpg');
+    background-size: 100% 500px;
+    position: relative;
+}
+
+#box2{
+    height: 500px;
+    width: 33%;
+    float: left;
+    background-image: url('teacher.jpg');
+    background-size: 100% 500px;
+    position: relative;
+}
+
+#box3{
+    height: 500px;
+    width: 33%;
+    float: left;
+    background-image: url('employer.jpg');
+    background-size: 100% 500px;
+    position: relative;
+}
+
+.student h2{
+    color: #ffffff;
+    position:absolute;
+    bottom: 10px;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    background-color: black;
+    opacity: 0.7;
+}
+
+.employ h2{
+    color: #ffffff;
+    position:absolute;
+    bottom: 10px;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    background-color: black;
+    opacity: 0.7;
+}
+
+.teacher h2{
+    top: 10px;
+    color: #ffffff;
+    position:absolute;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    background-color: black;
+    opacity: 0.7;
+}
+
+.teacher :hover{
+    opacity: 1;
+}
+
+.employ :hover{
+    opacity: 1;
+}
+
+.student :hover{
+    opacity: 1;
+}
+
+.textnphoto{
+    height: 500px;
+    width: 100%;
+}
+
+.text1{
+    width: 50%;
+    height: 500px;
+    color: #fdfdfd;
+    background-color: #1B75BB;
+    float: left;
+}
+
+.text1 p{
+    padding: 20px;
+    font-size: 14px;
+    text-align: justify;
+    line-height: 25px;
+}
+
+.text1 h3{
+    padding-top: 30px;
+    padding-left: 20px;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: left;
+
+}
+.photo1{
+    width: 50%;
+    height: 500px;
+    background-image: url('flight.jpg');
+    background-color: #1B75BB;
+    float: left;
+    background-size: 100% 500px;
+}
+
+.form{
+    padding-left: 310px;
+    width: 100%;
+    align-self: center;
+}
+
+.text2{
+    width: 50%;
+    height: 500px;
+    color: #fdfdfd;
+    background-color: #1B75BB;
+    float: left;
+    background-image:url('bg.jpg') ;
+    background-size: 100% 500px;
+}
+
+.text2 h3{
+    padding-top: 70px;
+    padding-left: 0px;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+}
+
+
