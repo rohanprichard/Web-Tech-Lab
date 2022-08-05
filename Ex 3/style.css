@@ -171,8 +171,17 @@ body{
 }
 
 .form{
-    padding-left: 310px;
+    margin-left: 180px;
+    margin-top: 100px;
     width: 100%;
+    align-self: center;
+    width: 50%;
+    height: 60%;
+    background-color: #0B3D59;
+    opacity: 0.9;
+}
+.form .inform{
+    padding-left: 100px;
     align-self: center;
 }
 
@@ -187,11 +196,11 @@ body{
 }
 
 .text2 h3{
-    padding-top: 70px;
-    padding-left: 0px;
+    margin-top: 100px;
+    padding-top: 20px;
+    margin-right: 35px;
     font-weight: 700;
     font-size: 30px;
     text-align: center;
 }
-
 
