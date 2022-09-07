@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping with JS!</title>
+    <style>
+        *{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+            background-color: #ffbbbb;
+            color: #ffffff;
+            margin: 0px;
+        }
+
+        img{
+            width: 200px;
+            height: 150px;
+        }
+
+        div{
+            padding: 20px;
+            padding-right: 50px;
+        }
+
+        label{
+            padding-right: 50px;
+        }
+
+        h1, h2{
+            text-align: center;
+        }
+
+        button{
+            background-color: #681b1b;
+            padding: 10px;
+            padding-left: 40px;
+            padding-right: 40px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            border-radius: 10px;
+            align-content: center;
+        }
+
+        #head,h1{
+            width: 100%;
+            padding: 10px;
+            background-color: #681b1b;
+        }
+        
+
+    </style>
+    <script>
+
+        function sumofitems(){
+            var sum = 0; 
+            var inp = document.getElementsByName('stuff');
+
+            for(var i=0; i<inp.length; i++){
+                if(inp[i].checked){
+                    sum = sum + parseInt(inp[i].value);
+                }
+            }
+            var tot = "Total amount: Rs " + sum;
+            var ou = document.getElementById('ou').innerHTML = tot
+        }
+
+    </script>
+
+</head>
+<body>
+    <div id="head">
+        <h1>
+            Fruit Shopping
+        </h1>
+    </div>
+    <div style="text-align: center;">
+        <div style="float: left;">
+            <img name="Banana" src="mike-dorner-sf_1ZDA1YFw-unsplash.jpg" alt="">
+            <input type="checkbox" name="stuff" id="Banana" value="50">
+            <label for="Banana">Banana <b>Rs. 50</b> </label>
+        </div>
+
+        <div>
+            <img name="Ducky" src="brett-jordan-wF7GqWA3Tag-unsplash.jpg" alt="">
+            <input type="checkbox" name="stuff" id="Ducky" value="200">
+            <label for="Ducky">Ducky <b>Rs. 200</b> </label>
+        </div>
+
+        <div style="float: left;">
+            <img src="louis-hansel-MardkT836BU-unsplash.jpg" alt="">
+            <input type="checkbox" name="stuff" id="Apple" value="30">
+            <label for="Apple">Apple <b>Rs. 30</b> </label>
+        </div>
+
+        <div>
+            <img src="jakub-dziubak-XtUd5SiX464-unsplash.jpg" alt="">
+            <input type="checkbox" name="stuff" id="Coffee" value="150">
+            <label for="Coffee">Coffee <b>Rs. 150</b> </label>
+        </div>
+        
+        <br>
+        <div>
+            <button onclick="sumofitems()">Buy</button>
+        </div>
+        <br><br>
+        <hr>
+        <br><br>
+        <h2 id ="ou"> Total Amount: Rs. 0 </h2>
+        <br><br>
+        <hr>
+        
+        
+    </div>
+</body>
+</html>

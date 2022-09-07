@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
+    <title>Document</title>
+    <style>
+        *{
+            float: left;
+            margin: 10px;
+        }
+        div{
+            width:200px;
+            height:200px;
+            background-color: aqua;
+            border: 2px solid;
+            margin: auto;
+            align-items: center;
+            align-content: center;
+            float: none;
+            padding:0px
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" >
+        <h1 id="text">Hello World</h1>
+    </div>
+    <br>
+    <p>Background Color: </p><input id='bgcolor'' type="color" onchange="change()">
+    <p>Text Color: </p><input id='txtcolor'' type="color" onchange="change()">
+    <p>Text Size: </p><input type="number" name="" id="txts" onchange="change()">
+    <p>Width: </p><input type="number" name="" id="width" onchange="change()">
+    <p>Height: </p><input type="number" name="" id="height" onchange="change()">
+    <p>Border Radius: </p><input type="range" name="" id="bord" min="1" max="20" value="2" onchange="change()">
+</body>
+</html>
