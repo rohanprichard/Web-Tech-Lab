@@ -10,13 +10,54 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <script>
-        ls = []
-        var tag = document.createElement("p");
-        var text = document.createTextNode("Tutorix is the best e-learning platform");
-        tag.appendChild(text);
-        var element = document.getElementById("new");
-        element.appendChild(tag);
+        let lsn = [];
+        let lsnn = [];
 
+        function remlast(){
+            lsn.pop();
+            lsnn.pop();
+            update();
+        }
+
+        function remfirst(){
+            lsn.shift();
+            lsnn.shift();
+            update();
+        }
+
+        function store(){
+
+            var name = document.getElementById('n1').value;
+            var num = document.getElementById('n2').value;
+
+            for(var i =0; i<num.length;i++){
+                if ((lsn[i] == name) | (lsnn[i] == num)){
+                    var temp = "Contact already exists\n" + name + " - " + num;
+                    window.alert(temp)
+                    return;
+                }
+            }
+
+            lsn.push(name);
+            lsnn.push(num);
+            update();
+
+        }
+
+        function update(){
+            var element = document.getElementById("res");
+            element.innerHTML = "";
+            var txt = "";
+            var tag = document.createElement("p");
+
+            for(var i = 0; i<lsn.length;i++){
+                txt = (i+1)+". "+lsn[i] + " - " + lsnn[i];  
+                tag.appendChild(document.createTextNode(txt));
+                tag.appendChild(document.createElement("br"));
+                element.appendChild(tag);
+                
+            }
+        }
     </script>
 
 </head>
@@ -36,13 +77,16 @@
     </div>
 
     <div class="container-fluid mt-3 text-center col-12 d-flex justify-content-center align-items-center">
-        <button class="btn btn-outline-primary m-2">Add Contact</button>
-        <button class="btn btn-outline-danger m-2">Delete First Contact</button>
-        <button class="btn btn-outline-danger m-2">Delete Last Contact</button>
+        <button class="btn btn-outline-primary m-2" onclick="store()">Add Contact</button>
+        <button class="btn btn-outline-danger m-2" onclick="remfirst()">Delete First Contact</button>
+        <button class="btn btn-outline-danger m-2" onclick="remlast()">Delete Last Contact</button>
     </div>
 
     <hr>
+    <div class="container-fluid mt-3 text-center col-12 d-flex justify-content-center align-items-center" id="res">
 
+    </div>
+    <hr>
     
 </body>
 </html>
