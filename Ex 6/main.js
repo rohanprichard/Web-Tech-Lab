@@ -28,13 +28,14 @@ function init(){
     var car = document.getElementById('car');
     car.style.position = 'relative';
     car.style.left='2px';
+    danger()
 }
 
 function move(){
     console.log(car.style.left)
     if (parseInt(car.style.left) >= 1080){
-        stop()
         danger()
+        stop()
     }
     car.style.left=parseInt(car.style.left)+2+"px";
 }
@@ -44,13 +45,11 @@ function stop(){
 }
 
 function danger(){
-    div = document.getElementById('danger')
-    div.backgroundColor = 'blue';
+    x = document.getElementById('pop');
+    if (x.style.display === "none") {
+       x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
 }
 
-function store() {
-    let n = []
-    let num = []
-    let nin = document.getElementById().value
-    let numin = document.getElementById().value
-}
