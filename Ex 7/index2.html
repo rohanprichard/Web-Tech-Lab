@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        var maxscore= 100;
+        var Score1=maxscore;
+        var Score2=maxscore;
+        var p1pos=0;
+        var p2pos=0;
+        $(document).ready(function()
+        {   $('#Reset').click(function()
+        {
+            $('#Score').html('<br><b>Score of the winner is :</b>')
+            $('#opp').css('left','10')
+            $('#opp').css('right','175')
+            $('#car').css('left','10')
+            $('#car').css('right','525')
+
+        })
+
+            $(document).keydown(function()
+                    {    if( parseInt($('#opp').css('left')) >= 1380)
+                        {
+                        alert("Player 2 Wins")
+                        $('#Score').html('<br>Score of the winner is :'+Score1+'</br>')
+                        }
+                         var car= $('#opp')
+                         var hp=30;
+                         var key= event.which
+                         if(parseInt(car.css('left'))===parseInt( $("#rock").css('left')) && parseInt(car.css('right'))===parseInt( $("#rock").css('right')))
+                         {
+                            Score1-=10;
+                         };
+                         switch(key)
+                         {  case 87:    
+                                        car.css('transform','rotate(270deg)')
+                                        $('#opp').animate({top:'-='+hp+'px'},1)
+                                        break;
+
+                            case 65:    
+                                        car.css('transform','rotateY(180deg)')
+                                        $('#opp').animate({left:'-='+hp+'px'},1)
+                                        break;
+
+                            case 68:    
+                                        car.css('transform','rotate(0deg)')
+                                        $('#opp').animate({left:'+='+hp+'px'},1)
+                                        break;
+
+                            case 83:    
+                                        car.css('transform','rotate(90deg)')
+                                        $('#opp').animate({top:'+='+hp+'px'},1)
+                                        break;
+                         }
+                    })
+
+                $(document).keydown(function()
+                    {   if( parseInt($('#car').css('left'))>=1380)
+                        {   alert("Player 1 Wins")
+                            alert(Score2)
+                            $('#Score').html('<br>Score of the winner is :'+Score2+'</br>')
+                        }
+                         var car= $('#car')
+                         var hp= 30;
+                         var key= event.which
+                         pos=parseInt(car.css('left'))
+                         pos=parseInt(car.css('right'))
+                         if(parseInt(car.css('left'))===885 && parseInt(car.css('right'))===885)
+                         {
+                            alert('inside if')
+                            Score2-=10;
+                         };
+                         switch(key)
+                         {  case 38:    
+                                        car.css('transform','rotate(270deg)')
+                                        $('#car').animate({top:'-='+hp+'px'},1)
+                                        break;
+
+                            case 37:    
+                                        car.css('transform','rotateY(180deg)')
+                                        $('#car').animate({left:'-='+hp+'px'},1)
+                                        break;
+
+                            case 39:    
+                                        car.css('transform','rotate(0deg)')
+                                        $('#car').animate({left:'+='+hp+'px'},1)
+                                        break;
+
+                            case 40:    
+                                        car.css('transform','rotate(90deg)')
+                                        $('#car').animate({top:'+='+hp+'px'},1)
+                                        break;
+                         }
+                    })
+        })
+    </script>
+</head>
+<body style="background-color: black;">
+    <div id="car" style="position: absolute; left: 10px; top: 175px; width: 100px; height: 50px; "> 
+        <img width="90" height="70" src="C:\Users\V Alwyn Raj\OneDrive\Desktop\Lab\.vscode\Ex-6\car.png"> 
+    </div>
+    <div id="opp" style="position: absolute; left: 10px; top: 525px; width: 100px; height: 50px; "> 
+        <img width="90" height="70" src="C:\Users\V Alwyn Raj\OneDrive\Desktop\Lab\.vscode\Ex-6\car.png"> 
+    </div>
+    <div id="Score" style="background-color: white; color: green; border: 1px solid gray;border-radius: 10px; position: absolute; width: 300px; height: 100px; left: 40%; top:40%;  text-align: center;">
+        <b>Score of the winner: </b>
+    </div>
+    <button id='Reset' style="position: absolute  ;left: 25%; top: 45%; width: 70px; height: 50px; border-radius: 10px; ">Reset</button>
+    <hr style="background-color: white; border: 1px solid white; position: absolute; width: 100%; top: 0px;">
+    <div id="rock" style="position: absolute; left: 953px; top:80px;"><img src="rock-removebg-preview.png" width="80px" height="70px"  >
+    </div>
+    <div id="rock" style="position: absolute; left: 1143px; top:50px;"><img src="rock-removebg-preview.png" width="80px" height="70px" >
+    </div>
+    <div id="rock" style="position: absolute; left: 593px; top:120px;"><img src="rock-removebg-preview.png" width="80px" height="70px"  >
+    </div>
+    <hr style="background-color: white; border: 1px solid white; position: absolute; width: 100%; top: 250px;">
+    <hr style="background-color: white; border: 1px solid white; position: absolute; width: 100%; top: 450px;">
+    <div id="rock" style="position: absolute; left: 953px; bottom:80px;"><img src="rock-removebg-preview.png" width="80px" height="70px"  >
+    </div>
+    <div id="rock" style="position: absolute; left: 1143px; bottom:200px;"><img src="rock-removebg-preview.png" width="80px" height="70px" >
+    </div>
+    <div id="rock" style="position: absolute; left: 593px; bottom:120px"><img src="rock-removebg-preview.png" width="80px" height="70px"  >
+    </div>
+    <hr style="background-color: white; border: 1px solid white; position: absolute; width: 100%; top: 700px;">
+<div>
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Calculator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script>
+        $(document).ready(function(){
+            console.log("Hey, we're up and running!");
+            $('#calc').click(function(){
+                sum = parseInt($('#asd').val())
+                a = parseInt($('#rent').val())
+                b = parseInt($('#sav').val())
+                c = parseInt($('#eme').val())
+                d = parseInt($('#acc').val())
+                s = a+b+c+d
+                if(s != 100){
+                    window.alert('The percentage values are incorrect')
+                } else{
+
+                    $('#r').text(( $('#r').text() + ' Rs. ' + (a * 0.01 * sum)))
+                    $('#s').text(( $('#s').text() + ' Rs. ' + (a * 0.01 * sum)))
+                    $('#e').text(( $('#e').text() + ' Rs. ' + (a * 0.01 * sum)))
+                    $('#a').text(( $('#a').text() + ' Rs. ' + (a * 0.01 * sum)))
+                }
+            })
+
+        });
+    </script>
+    <style>
+        * {
+            padding: 0px;
+        }
+    </style>
+
+</head>
+<body class="">
+    <div class="text-center text-white bg-primary p-4 col-12">
+        <h1 class="display-4 ">Budget Calculator App</h1>
+    </div>
+
+    <div class="col-12 text-center">
+        <p class="fw-light fs-2 pt-4">Enter your income:</p>
+    </div>
+
+    <div class="col-2 text-center container-fluid d-flex justify-content-center">
+        <input id ='asd' type="number" class="form-control col-12 ">
+    </div>
+
+    <div class="col-12 text-center pt-4">
+        <p class="fw-light fs-2 pt-4">Enter the percent for each part:</p>
+    </div>
+    <div class="col-12 text-center row pt-4">
+        <p class="col-1">Rent:</p>
+        <div class="col-2"><input class="form-control" id='rent' type="number"></div>
+        <p class="col-1">Savings:</p>
+        <div class="col-2"><input class="form-control" id='sav' type="number"></div>
+        <p class="col-1">Emergency:</p>
+        <div class="col-2"><input class="form-control" id='eme' type="number"></div>
+        <p class="col-1">Acessories:</p>
+        <div class="col-2"><input class="form-control" id='acc' type="number"></div>
+    </div>
+
+    <div class="text-center cols-12 pt-4 container-fluid d-flex justify-content-center">
+        <button id='calc' class="btn btn-primary col-2 pt-3 pb-3">Evaluate my money</button>
+    </div>
+
+    <div class="col-12 text-center row pt-4">
+        <p id="r" class="col-3 bg-primary text-white">Rent: </p>
+        <p id="s" class="col-3 bg-warning text-white">Savings: </p>
+        <p id="e" class="col-3 bg-danger text-white">Emergency: </p>
+        <p id="a" class="col-3 bg-success text-white">Acessories: </p>
+    </div>
+    
+
+</body>
+</html>

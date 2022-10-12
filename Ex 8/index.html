@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script>
+        var app = angular.module("myapp",[])
+        app.controller("control",);
+    </script>
+
+</head>
+<body ng-app="myapp" ng-controller="control">
+    <div class="text-center text-white bg-success p-4 col-12">
+        <h1 class="display-4 ">EMI Calculator</h1>
+    </div>
+
+    <div class="col-12 text-center">
+        <p class="fw-light fs-2 pt-4">Enter Loan Amount:</p>
+    </div>
+
+    <div class="col-2 text-center container-fluid d-flex justify-content-center">
+        <input id ='loa' type="number" class="form-control col-12 " ng-model="loan">
+    </div>
+
+    <div class="col-12 text-center">
+        <p class="fw-light fs-2 pt-4">Enter interest rate:</p>
+    </div>
+
+    <div class="col-2 text-center container-fluid d-flex justify-content-center">
+        <input id ='inte' type="number" class="form-control col-12 " ng-model="inter">
+    </div>
+
+    <div class="col-12 text-center">
+        <p class="fw-light fs-2 pt-4">Enter Years:</p>
+    </div>
+
+    <div class="col-2 text-center container-fluid d-flex justify-content-center">
+        <input id ='yea' type="number" class="form-control col-12 " ng-model="yrs">
+    </div>
+
+    <div class="col-12 text-center container-fluid d-flex justify-content-center">
+        <p class="col-2">{{loan}}</p>
+        <p class="col-2">{{loan*inter*Math.pow((1+inter),yrs)/(Math.pow((1+inter),yrs)-1)}}</p>
+        <p class="col-2"></p>
+
+    </div>
+
+
+</body>
+</html>
