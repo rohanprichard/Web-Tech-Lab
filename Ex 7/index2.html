@@ -13,11 +13,12 @@
         var p1pos=0;
         var p2pos=0;
         $(document).ready(function()
-        {   $('#Reset').click(function()
+        {   
+            $('#Reset').click(function()
         {
-            $('#Score').html('<br><b>Score of the winner is :</b>')
-            $('#opp').css('left','10')
-            $('#opp').css('right','175')
+            $('#Score').html('<br><b>Score of the winner is :</b>');
+            $('#opp').css('left','10');
+            $('#opp').css('right','175');
             $('#car').css('left','10')
             $('#car').css('right','525')
 
@@ -30,11 +31,12 @@
                         $('#Score').html('<br>Score of the winner is :'+Score1+'</br>')
                         }
                          var car= $('#opp')
+                         car.css('transform','rotateY(180deg)')
                          var hp=30;
                          var key= event.which
                          if(parseInt(car.css('left'))===parseInt( $("#rock").css('left')) && parseInt(car.css('right'))===parseInt( $("#rock").css('right')))
                          {
-                            Score1-=10;
+                            Score1 -= 10;
                          };
                          switch(key)
                          {  case 87:    
@@ -66,13 +68,13 @@
                             $('#Score').html('<br>Score of the winner is :'+Score2+'</br>')
                         }
                          var car= $('#car')
+                         car.css('transform','rotateY(180deg)')
                          var hp= 30;
                          var key= event.which
                          pos=parseInt(car.css('left'))
                          pos=parseInt(car.css('right'))
                          if(parseInt(car.css('left'))===885 && parseInt(car.css('right'))===885)
                          {
-                            alert('inside if')
                             Score2-=10;
                          };
                          switch(key)
@@ -100,14 +102,14 @@
         })
     </script>
 </head>
-<body style="background-color: black;">
+<body style="background-color: rgb(44, 44, 44);">
     <div id="car" style="position: absolute; left: 10px; top: 175px; width: 100px; height: 50px; "> 
-        <img width="90" height="70" src="C:\Users\V Alwyn Raj\OneDrive\Desktop\Lab\.vscode\Ex-6\car.png"> 
+        <img width="90" height="70" src="car.png"> 
     </div>
     <div id="opp" style="position: absolute; left: 10px; top: 525px; width: 100px; height: 50px; "> 
-        <img width="90" height="70" src="C:\Users\V Alwyn Raj\OneDrive\Desktop\Lab\.vscode\Ex-6\car.png"> 
+        <img width="90" height="70" src="car.png"> 
     </div>
-    <div id="Score" style="background-color: white; color: green; border: 1px solid gray;border-radius: 10px; position: absolute; width: 300px; height: 100px; left: 40%; top:40%;  text-align: center;">
+    <div id="Score" style="background-color: rgb(255, 229, 229); color: green; border: 1px solid gray;border-radius: 10px; position: absolute; width: 300px; height: 100px; left: 40%; top:40%;  text-align: center;">
         <b>Score of the winner: </b>
     </div>
     <button id='Reset' style="position: absolute  ;left: 25%; top: 45%; width: 70px; height: 50px; border-radius: 10px; ">Reset</button>

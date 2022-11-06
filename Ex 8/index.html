@@ -9,8 +9,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script>
-        var app = angular.module("myapp",[])
-        app.controller("control",);
+
+        var app = angular.module("myapp",[]);
+
+        app.controller("control",function($scope){
+            console.log('Here')
+            $scope.calc = function(){
+                console.log('Here');
+
+                $scope.res = $scope.loan * Math.pow(( (100 + $scope.inter)/100 ), $scope.yrs)
+            }
+        });
+
     </script>
 
 </head>
@@ -43,13 +53,25 @@
         <input id ='yea' type="number" class="form-control col-12 " ng-model="yrs">
     </div>
 
-    <div class="col-12 text-center container-fluid d-flex justify-content-center">
-        <p class="col-2">{{loan}}</p>
-        <p class="col-2">{{loan*inter*Math.pow((1+inter),yrs)/(Math.pow((1+inter),yrs)-1)}}</p>
-        <p class="col-2"></p>
-
+    <div class="col-2 text-center container-fluid d-flex justify-content-center pt-3 pb-3">
+        <button class="btn btn-success" ng-click="calc()">Calculate</button>
     </div>
 
+    <div class="col-12 text-center container-fluid d-flex justify-content-center">
+        <p class="col-12"> <b>Amount:</b> Rs. {{loan}}</p><br>
+    </div>
+
+    <div class="col-12 text-center container-fluid d-flex justify-content-center">
+        <p class="col-12"> <b>Interest:</b> Rs. {{res-loan }}</p><br>
+    </div>
+
+    <div class="col-12 text-center container-fluid d-flex justify-content-center">
+        <p class="col-12"> <b>EMI:</b> Rs. {{(res-loan)/(yrs*12)}}</p><br>
+    </div>
+
+    <div class="col-12 text-center container-fluid d-flex justify-content-center">
+        <p class="col-12"> <b>Total Repayment:</b> Rs. {{res}}</p><br>
+    </div>
 
 </body>
 </html>

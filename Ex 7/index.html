@@ -11,7 +11,9 @@
     <script>
         $(document).ready(function(){
             console.log("Hey, we're up and running!");
+
             $('#calc').click(function(){
+
                 sum = parseInt($('#asd').val())
                 a = parseInt($('#rent').val())
                 b = parseInt($('#sav').val())
@@ -20,12 +22,13 @@
                 s = a+b+c+d
                 if(s != 100){
                     window.alert('The percentage values are incorrect')
+
                 } else{
 
-                    $('#r').text(( $('#r').text() + ' Rs. ' + (a * 0.01 * sum)))
-                    $('#s').text(( $('#s').text() + ' Rs. ' + (a * 0.01 * sum)))
-                    $('#e').text(( $('#e').text() + ' Rs. ' + (a * 0.01 * sum)))
-                    $('#a').text(( $('#a').text() + ' Rs. ' + (a * 0.01 * sum)))
+                    $('#r').text(('Rent: Rs. ' + (a * 0.01 * sum)))
+                    $('#s').text(('Savings: Rs. ' + (b * 0.01 * sum)))
+                    $('#e').text(('Emergency: Rs. ' + (c * 0.01 * sum)))
+                    $('#a').text(('Accessories Rs. ' + (d * 0.01 * sum)))
                 }
             })
 
