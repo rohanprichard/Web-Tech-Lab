@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body style="background-color: #c5e7ff;">
+
+    <div class="form_div">
+
+        <div style="text-align: center;">
+            <h1>User Registration Form</h1>
+        </div>
+
+        <div style="text-align: center;">   
+            <form action="/server" method="post">
+
+                <input type="text" placeholder="Name" name="Pname" required><br><br>
+                <input type="password" placeholder="Password" name="Ppass" required><br><br>
+                <input type="text" placeholder="Age" name="Page" required><br><br>
+                <input type="tel" placeholder="Mobile Number" name="Pnum" required><br><br>
+                <input type="email" placeholder="Email" name="Pmail" required><br><br>
+
+                Gender:
+                <input type="radio" name="Pgender" value="male"> Male
+                <input type="radio" name="Pgender" value="male"> Female <br><br>
+
+                State:
+                <select name="Pstate">
+                    <option>Kerala</option>
+                    <option>TamilNadu</option>
+                    <option>J&K</option>
+                </select><br><br>
+
+                Skills:
+                <input type="checkbox" name="Pskill" value="C++">C++
+                <input type="checkbox" name="Pskill" value="SQL">SQL
+                <input type="checkbox" name="Pskill" value="JavaScript">JavaScript
+                <input type="checkbox" name="Pskill" value="Python">Python<br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>
+    
