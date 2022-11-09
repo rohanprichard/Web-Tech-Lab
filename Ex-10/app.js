@@ -4,7 +4,7 @@ const server = http.createServer(function (req, res) {
     
     if(req.url==='/'){
         res.writeHead(200,{"Content-Type": "text/html"});
-        fs.createReadStream('./form.html').pipe(res);
+        fs.createReadStream('/Users/rohanrichard/Desktop/Code/WebTech/WebTechLab-main/Web-Tech-Lab/Ex-10/form.html').pipe(res);
     }
 
     else if(req.url ==='/server' && req.method == 'POST'){
@@ -23,12 +23,7 @@ const server = http.createServer(function (req, res) {
             res.write('<tr><td>Email</td><td>'+inputdata.get('email') + '</td></tr>');
             res.write('<tr><td>Gender</td><td>'+inputdata.get('gen') + '</td></tr>');
             res.write('<tr><td>State</td><td>'+inputdata.get('state') + '</td></tr>');
-            const skill = [];
-            arr.forEach(element => {
-                console.log(element);
-            });
-            res.write('<tr><td>Skills</td><td>'+inputdata.get('skill.forEach(function)') + '</td></tr></table>');
-           
+            res.write('<tr><td>Skills</td><td>'+inputdata.get('skill') + '</td></tr></table>');
             res.end();
         });
     }
