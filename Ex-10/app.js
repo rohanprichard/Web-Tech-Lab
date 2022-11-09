@@ -23,7 +23,6 @@ const server = http.createServer(function (req, res) {
             res.write('<tr><td>Email</td><td>'+inputdata.get('email') + '</td></tr>');
             res.write('<tr><td>Gender</td><td>'+inputdata.get('gen') + '</td></tr>');
             res.write('<tr><td>State</td><td>'+inputdata.get('state') + '</td></tr>');
-            res.write('<tr><td>Skills</td><td>'+inputdata.get('skill') + '</td></tr></table>');
             res.end();
         });
     }
